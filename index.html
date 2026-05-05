@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>History of India</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(120deg, #ff9933, #ffffff, #138808);
+      padding: 30px;
+      text-align: center;
+    }
+
+    nav {
+      background: #1e1e1e;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      background: #ff9933;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    nav button:hover {
+      background: #e67e22;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #138808;
+    }
+
+    button.back {
+      margin-top: 20px;
+      padding: 8px 15px;
+      background: #138808;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.back:hover {
+      background: #0f6d06;
+    }
+
+    #welcome {
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>History of India</h1>
+</header>
+
+<nav>
+  <button onclick="showSection('ancient')">Ancient India</button>
+  <button onclick="showSection('medieval')">Medieval India</button>
+  <button onclick="showSection('british')">British Rule</button>
+  <button onclick="showSection('independence')">Independence</button>
+</nav>
+
+<div class="container">
+
+  <!-- Welcome -->
+  <div id="welcome" class="card">
+    <h2>Welcome</h2>
+    <p>Let’s explore the history of India</p>
+  </div>
+
+  <!-- Ancient -->
+  <div id="ancient" class="card" style="display:none;">
+    <h2>Ancient India</h2>
+
+    <p>
+    Ancient India marks the beginning of one of the world’s oldest civilizations. It began with the Indus Valley Civilization around 2500 BCE. Cities like Harappa and Mohenjo-Daro were highly advanced with planned streets, drainage systems, and strong infrastructure.
+    </p>
+
+    <p>
+    People engaged in trade with distant regions like Mesopotamia, showing early global connections. However, this civilization declined around 1900 BCE due to environmental and geographical changes.
+    </p>
+
+    <p>
+    The Vedic Period followed, during which the Vedas were composed. These texts shaped religion, philosophy, and social structure. Society became more organized and agriculture became the main occupation.
+    </p>
+
+    <p>
+    Later, powerful empires such as the Maurya Empire unified large parts of India. Emperor Ashoka promoted peace and Buddhism. The Gupta Empire brought advancements in science, mathematics, and literature, making it the Golden Age of India.
+    </p>
+
+    <button class="back" onclick="goHome()">Back</button>
+  </div>
+
+  <!-- Medieval -->
+  <div id="medieval" class="card" style="display:none;">
+    <h2>Medieval India</h2>
+
+    <p>
+    The Medieval period saw the rise of new kingdoms and dynasties. The Delhi Sultanate ruled large parts of India from the 13th to the 16th century and introduced new systems of governance and culture.
+    </p>
+
+    <p>
+    The Mughal Empire, founded by Babur in 1526, became one of the most powerful empires. Under rulers like Akbar, the empire expanded and promoted unity among diverse communities.
+    </p>
+
+    <p>
+    This period is known for cultural richness, including art, music, and architecture. Famous monuments like the Taj Mahal and Red Fort were built during this time.
+    </p>
+
+    <p>
+    The blending of Indian and Persian traditions created a unique cultural identity that still influences India today.
+    </p>
+
+    <button class="back" onclick="goHome()">Back</button>
+  </div>
+
+  <!-- British -->
+  <div id="british" class="card" style="display:none;">
+    <h2>British Rule</h2>
+
+    <p>
+    The British East India Company arrived in India for trade but gradually gained control through military power and political strategies. The Battle of Plassey in 1757 marked the beginning of British dominance.
+    </p>
+
+    <p>
+    British rule led to economic exploitation, as Indian resources were used to benefit Britain. Traditional industries declined significantly.
+    </p>
+
+    <p>
+    However, infrastructure such as railways, telegraphs, and modern education systems were introduced, which later helped India develop.
+    </p>
+
+    <p>
+    The Revolt of 1857 was the first major uprising against British rule. Though it failed, it inspired future movements for independence.
+    </p>
+
+    <button class="back" onclick="goHome()">Back</button>
+  </div>
+
+  <!-- Independence -->
+  <div id="independence" class="card" style="display:none;">
+    <h2>Independence Movement</h2>
+
+    <p>
+    The independence movement grew stronger in the 20th century with the formation of organizations like the Indian National Congress.
+    </p>
+
+    <p>
+    Mahatma Gandhi led non-violent movements such as the Non-Cooperation Movement and Civil Disobedience Movement. Millions of people participated in the struggle.
+    </p>
+
+    <p>
+    Other leaders like Subhas Chandra Bose and Bhagat Singh played important roles through different methods of resistance.
+    </p>
+
+    <p>
+    India gained independence on August 15, 1947. However, partition led to migration and challenges. Despite this, India became a free and democratic nation.
+    </p>
+
+    <button class="back" onclick="goHome()">Back</button>
+  </div>
+
+</div>
+
+<script>
+function showSection(id) {
+  document.getElementById("welcome").style.display = "none";
+
+  document.getElementById("ancient").style.display = "none";
+  document.getElementById("medieval").style.display = "none";
+  document.getElementById("british").style.display = "none";
+  document.getElementById("independence").style.display = "none";
+
+  document.getElementById(id).style.display = "block";
+}
+
+function goHome() {
+  document.getElementById("welcome").style.display = "block";
+
+  document.getElementById("ancient").style.display = "none";
+  document.getElementById("medieval").style.display = "none";
+  document.getElementById("british").style.display = "none";
+  document.getElementById("independence").style.display = "none";
+}
+</script>
+
+</body>
+</html>
